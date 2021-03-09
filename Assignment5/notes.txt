@@ -1,0 +1,42 @@
+1. add a target "check" with the script :
+	a=$(./randall 5 | wc -c); if [ $a -eq 5 ]; then echo "success"; else echo "fail"; fi
+   and take out the part for deciding nbytes into optinos.c:
+	nbytes = strtoll (argv[1], &endptr, 10);
+   and writebytes function to output.c, hardware_rand64_init, hardware_rand64, and hardware_rand64_fini to rand64-hw files
+   software_rand64_init, software_rand64, and software_rand64_fini move to rand64-sw files
+2. change randall.c to glue everything together.
+3. modify Makefile to function correctly.
+4. remove "static" from all function in files other than randall.c
+5. change options.c to pass by reference instead of pass by value
+6. in options.c add getopt to recieve -i and -o options.
+7. add input and output argument for options to return variables to randall.c
+8. in randall.c, add code to deal with when input is "mrand48_r" or "/F" etc.
+9. in randall.c, add code for dealling cases when output is different value.
+10.add error check for malloc and write
+11.forgot to use github, use github
+12.add testing case in test_script.sh
+13.remove some libraries in randall.c
+14.add srand48_r and time function to seed the random number so that multiple nul charaters won't appear in a single test
+
+
+* command "time dd if=/dev/urandom ibs=8192 obs=8192 count=16384 >/dev/null" returns:
+134217728 bytes (134 MB, 128 MiB) copied, 1.01693 s, 132 MB/s
+
+real    0m1.020s
+user    0m0.013s
+sys     0m1.005s
+
+* command "time ./randall 133562368 >/dev/null" returns
+real    0m3.977s
+user    0m3.944s
+sys     0m0.030s
+
+* command "time ./randall 133562368 | cat >/dev/null" returns
+real    0m4.300s
+user    0m3.981s
+sys     0m0.515s
+
+* command "time ./randall 133562368 >rand.data" returns
+real    0m5.745s
+user    0m3.931s
+sys     0m0.120s
