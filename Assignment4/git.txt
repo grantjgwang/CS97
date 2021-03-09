@@ -1,0 +1,18 @@
+1. Command
+	 git log -S "Newline characters in the host and path part of git:// URL are now forbidden"
+   returns nothing
+2. Command
+	git log -S "Newline characters in the host and path"
+   return two commits: d5922333cb0cc15ddd75be3b102b42c34de9a96a and e6362826a0409539642a5738db61827e5978e2e4.
+3. git show <commitID> on both and discover that e6362826a0409539642a5738db61827e5978e2e4 happen eariler than the other, so I keep track on it.
+4. git shoe e6362826a0409539642a5738db61827e5978e2e4 has content includes 
+	*   Newline characters in the host and path part of git:// URL are
+	    now forbidden.
+	    (merge 6aed56736b jk/forbid-lf-in-git-url later to maint).
+5. check 6aed56736b and find that "fsck" is the funciton that reject a URL with newlines. And the comment mention that the previous commit "taught the clone/fetch client side to reject a
+    git:// URL with a newline in it" 
+6. check 6aed56736b^ and find the result. 
+
+
+The code in git_connect_git() was changed and the author is Jeff King. And the commit ID is a02ea577174ab8ed18f847cf1693f213e0b9c473
+
