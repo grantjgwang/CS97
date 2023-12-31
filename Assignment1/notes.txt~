@@ -1,0 +1,16 @@
+
+1.5:
+  1.) mv located in /usr/local/cs/bin/mv. And, sh located in /usr/bin/sh
+  2.) There are tr, ar, pr. tr translate or delete characters. ar create, modify, and extract from archieves. pr convert text files for printing
+  3.) /etc/alternative/emacs
+  4.) /usr/bin/gcc is version 2.20. Plain gcc is version 10.2.0. The plain gcc is what we usually use. /usr/bin/gcc is under the PATH we set and is what we are using for this class.
+  5.) u+sx means inable the permission for the owner to execute and set owner's ID on execution. o-w means other users is not allowed to write.
+  6.) 36 was found
+  7.) 292
+  8.) librom1394.so.0.3.0
+  9.) It is based on the settings of the environment.
+  10.)downcase-dwim, downcase-region, downcase-word
+  11.)C-M-r begins reverse incremental regular expresssion search. C-M-s begins incremental regular expression search. C-M-t transpose two characters. C-M-u move up in parenthesis structure. C-M-v scrolls the next window upward.
+  12.)C-g is a keyboard-quit
+  13.)C-y to yank the last kill into the buffer
+  14.)dired fill an emacs buffer with a list of directories and some subdirectories. 

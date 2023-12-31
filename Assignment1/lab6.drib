@@ -1,0 +1,1 @@
+xcompilegcc hello.c -o hello.out!./hello.out < hello-a1 2>hello-a2OB!./hello.out > hello-a1 2>hello-a2OA!./hello.out > hello-a1 2> hello-a2./!./hello.out > hello-b1 2 > hello-b2!./hello.out < etc//etc/passwd > /dev/full 2> hello-c1 2> hello-c2!./hello.out < /etc/passwd > /dev/full 2> hello-d2y
