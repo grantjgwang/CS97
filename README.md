@@ -1,8 +1,8 @@
 # CS97: Software Construction Projects by Prof. Eggert
 This is a repository for course COM SCI 97 from UCLA during Winter 2021 quater.
 
-| Assignments             | Grade      |
-| ----------------------- |:----------:|
+| Assignments     | Grade    |
+| --------------- |:--------:|
 | Homework 1      |    100   |
 | Homework 2      |    89    |
 | Homework 3      |    100   |
